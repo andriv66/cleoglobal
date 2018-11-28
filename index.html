@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+    <meta charset="UTF-8">
+    <title>CLEO FOUNDATION</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <style type="text/css">
+           .centerVid {
+               margin: 25px auto;
+               text-align: center;
+           }
+           .layers {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               width: 80%;
+               min-height: 80vh;
+           }
+           .slogan {
+               font-family: 'Lato', sans-serif;
+               font-size: 40px;
+               margin-left: 5px;
+               color: #62BBE9;
+           }
+           .leadCharacter {
+               font-size: 75px;
+               font-weight: bold;
+               color: #2A2A68;
+           }
+           .initiallyHidden {
+               /*visibility: hidden;*/
+               opacity: 0;
+           }
+           .visible {
+               /*visibility: visible;*/
+               opacity: 1;
+               /*transition: opacity 4s;*/
+               transition: opacity 4s;
+
+           }
+           .hidden {
+               /*visibility: hidden;*/
+               /*visibility: visible;*/
+               opacity: 0;
+               transition: opacity 6s;
+               /*transition: visibility 8s;*/
+               /*transition: visibility 5s 5s, opacity 4s linear;*/
+           }
+
+        </style>
+    <script language="JavaScript">
+        setTimeout(function (){
+            document.getElementById('landing').classList.add('visible');
+            setTimeout(function (){
+                //document.getElementById('landing').classList.remove('visible');
+                document.getElementById('landing').classList.add('hidden');
+                // document.getElementById('landing').remove();
+                document.getElementById('landing').style.zIndex = "5";
+                document.getElementById('intro').style.zIndex = "1";
+                document.getElementById('intro').classList.add('initiallyHidden');
+                document.getElementById('intro').classList.add('visible');
+                document.getElementById('myvideo').play();
+                document.getElementById('myvideo').onended = function () {
+                    document.getElementById('intro').remove();
+                    document.getElementById('pageOne').classList.remove('initiallyHidden');
+                    document.getElementById('pageOne').classList.add('visible');
+                }
+
+            },3500);
+        }, 500);
+    </script>
+</head>
+<body>
+<div id="container" style="height: 80vh; visibility: visible; text-align: center;">
+    <div id="landing" class="centerVid layers initiallyHidden" style="min-width: 80vh; width:100%; z-index: 1; align-content: center">
+        <div><img src="images/ESFIhAbS_400x400.jpg" width="150px"></div><div class="slogan">
+        <span class="leadCharacter">C</span>HANGING <span  class="leadCharacter">L</span>IVES <span  class="leadCharacter">E</span>VERY <span  class="leadCharacter">O</span>PPORTUNITY</div>
+    </div>
+    <div id="intro" class="centerVid layers initiallyHidden" style="position: absolute; top: 0; width:100%; justify-content: center">
+        <video id='myvideo' width="80%" controls muted class="centerVid" onended="nextScreen">
+            <source  src="video/CLEO_ALT_2_cubes_v8.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div id="pageOne" class="centerVid layers initiallyHidden" style="position: absolute; top: 0; width:100%; justify-content: center">
+        <div class="slogan">Now I am here</div>
+    </div>
+</div>
+
+</body>
+</html>
