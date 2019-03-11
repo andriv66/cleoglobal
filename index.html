@@ -127,6 +127,20 @@
             padding-right: 2px;
             color: #2A2A68;
         }
+        .main_section{
+            display: inline-block;
+            width: 98%;
+            font-family: 'alteHaas', sans-serif;
+            margin-left: 10px;
+            height: 390px;
+        }
+        .bottom{
+            display: inline-block;
+            width: 98%;
+            height: 100px;
+            font-family: 'alteHaas', sans-serif;
+            margin-left: 10px;
+        }
         #info{
             display: flex;
             width: 100%;
@@ -158,23 +172,31 @@
     <div id="main" class="main">
         <!-- Main section -->
         <div id="main_container" class="main_container">
-            <video id='myvideo' width="85%" autoplay muted class="centerVid" style="padding-left: 10px" onended="nextScreen()">
+            <video id='myvideo' width="85%" autoplay controls muted class="centerVid" style="padding-left: 10px" onended="nextScreen()">
                 <source  src="video/Social_Economy.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
         <div id="second_screen" class="top_layer">
             <div class="header">
-                <div>
+                <div width="85%">
                 <div class="tab">
                     <img src="images/ESFIhAbS_400x400.jpg" width="150px"></div>
                 <div class="tab slogan"> <span class="leadCharacter">C</span><span>HANGING</span> <span class="leadCharacter">L</span><span>IVES</span> <span  class="leadCharacter">E</span><span>VERY</span> <span  class="leadCharacter">O</span><span>PPORTUNITY</span>
                 </div>
-                </div>
+                <div class="main_section">
+                    <p>
+                        <b>What is CLEO?</b><br>
+                        <p>The CLEO Global foundation
+                    is a non-profit organization, with the mission of personal empowerment, allowing people to live the life that they deserve.</p>
+                    </p>
+                    </div>
+                <div class="bottom"> Bottom </div>
                 <!-- <ul class="font_style" style="font-color: grey; clear: both">
                 <li>A BETTER WAY TO GIVE</li>
             </ul>-->
             </div>
+
         </div>
     </div>
 </div>
