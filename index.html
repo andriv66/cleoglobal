@@ -75,17 +75,17 @@
         .header{
             position: relative;
             border-radius: 15px;
-            overflow: auto;
             /*border-top-right-radius: 15px;*/
             width: 95%;
             border: 1px blue solid;
             height: 90%;
+            overflow: hidden;
             margin-top: 20px;
             align-self: left;
             /*background-color: black;*/
         }
         .head{
-            width: 85%;
+            width: 100%;
             height: 150px;
             display: inline-block;
         }
@@ -137,10 +137,23 @@
             width: 98%;
             font-family: 'alteHaas', sans-serif;
             margin-left: 10px;
+            overflow: auto;
             height: calc(90vh - 250px);
         }
         b{
             color: #62BBE9;
+        }
+        .bulletList{
+            display: inline-block;
+            flow: left;
+            width: 100%;
+        }
+        ul{
+            list-style-image: url('images/bullet.jpg');
+            line-height: 30px;
+            width: 45%;
+            display: inline-block;
+            float: left;
         }
         .bottom{
             display: inline-block;
@@ -148,6 +161,8 @@
             height: 100px;
             font-family: 'alteHaas', sans-serif;
             margin-left: 10px;
+            border-top: 1px #62BBE9 solid;
+            text-align: center
         }
         #info{
             display: flex;
@@ -207,8 +222,31 @@
                         of the decentralized nature
                         of cryptocurrency. This platform will provide the
                         tools to reinforce individual stakeholders in the blockchain ecosystem by supporting local communities and providing a use case for buying and selling goods and services. As such, this ecosystem will be able to establish a Network of Trust.</p>
+
+                    <p><b>How can CLEO help?</b></p>
+                    <div class="bulletList">
+                        <ul>
+                            <li>Give ownership of life back to the individual to inspire self worth</li>
+                            <li>Engage on an equal footing</li>
+                            <li>Inspire new ideas to give people control over their own lives</li>
+                            <li>Encourage a “pay it forward” incentive via distributed staking and voting that enables fair and transparent funding.</li>
+                        </ul>
+                        <ul>
+                            <li>Promote social entrepreneurship</li>
+                            <li>Enable community based collaboration online and on the ground</li>
+                            <li>Provide the tools and resources for individuals and community projects underpinned with charitable co action.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="bottom"> Bottom </div>
+                <div class="bottom">
+                    <form>
+                        <br><br>
+                        Get all the latest CLEO updates by signing up for CLEO News Letter
+                        <input type="email" placeholder="email address" size="25" id="newsemail">
+                        <input type="submit" value="Sign Me Up!">
+                    </form>
+
+                </div>
                 <!-- <ul class="font_style" style="font-color: grey; clear: both">
                 <li>A BETTER WAY TO GIVE</li>
             </ul>-->
