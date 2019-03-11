@@ -1,91 +1,162 @@
 <!DOCTYPE html>
-<html lang="en" style="height: 100%">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CLEO FOUNDATION</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-        <style type="text/css">
-           .centerVid {
-               margin: 25px auto;
-               text-align: center;
-           }
-           .layers {
-               display: flex;
-               align-items: center;
-               justify-content: center;
-               width: 80%;
-               min-height: 80vh;
-           }
-           .slogan {
-               font-family: 'Lato', sans-serif;
-               font-size: 40px;
-               margin-left: 5px;
-               color: #62BBE9;
-           }
-           .leadCharacter {
-               font-size: 75px;
-               font-weight: bold;
-               color: #2A2A68;
-           }
-           .initiallyHidden {
-               /*visibility: hidden;*/
-               opacity: 0;
-           }
-           .visible {
-               /*visibility: visible;*/
-               opacity: 1;
-               /*transition: opacity 4s;*/
-               transition: opacity 4s;
+    <title>CLEO Foundation</title>
+    <style type="text/css">
+        #background_container{
+            background-image: url('images/ESFIhAbS_400x400.jpg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 700px;
+            height: 100vh;
+            width: 100vh;
+            /*min-height: 100%;*/
+            min-width: 100%;
+            opacity: 0.1;
+        }
+        .font_style {
+            font-family: 'alteHaas', sans-serif;
+            /*font-size: 35px;*/
+            margin-left: 5px;
+        }
+        h1 {
+            font-size: 60px;
+            color: #2A2A68;
+            font-weight: normal;
+        }
+        .container{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            overflow:auto;
+            top: 0;
+        }
+        .navigation{
+            width: 90px;
+            height: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 70px;
+            text-align: center;
+            float: left;
+        }
+        .main{
+            width: auto;
+            height: 100%;
+            padding-top: 20px;
+        }
+        .main_container{
+            width: 100%;
+            height: 90%;
+            text-align: center;
+            vertical-align: center;
+        }
+        .top_layer{
+            display: flex;
+            width: 0%;
+            height: 0%;
+            background-color: white;
+            justify-content: center;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: 5px;
+            transform: translate(-50%, -50%);
+        }
+        #myvideo{
+            -moz-border-radius:25px;
+            -webkit-border-radius:25px;
+            border-radius:25px;
+        }
+        #header {
+            opacity: 1;
+            min-width: 95%;
+            display: flex;
+            white-space: nowrap;
+            justify-content: center;
+            align-text: center;
+            text-align: center;
+            align-items: center;
+        }
+        #logo{
+            align: center;
+            float: left;
+        }
+        .slogan {
+            font-family: 'alteHaas', sans-serif;
+            font-size: 35px;
+            align-text: center;
+            margin-left: 5px;
+            color: #62BBE9;
+        }
+        .leadCharacter {
+            color: #2A2A68;
+        }
+        #info{
+            display: flex;
+            width: 100%;
+            height: 65%;
+            padding-top: 20px;
+            justify-content: center;
+        }
 
-           }
-           .hidden {
-               /*visibility: hidden;*/
-               /*visibility: visible;*/
-               opacity: 0;
-               transition: opacity 6s;
-               /*transition: visibility 8s;*/
-               /*transition: visibility 5s 5s, opacity 4s linear;*/
-           }
-
-        </style>
+    </style>
     <script language="JavaScript">
-        setTimeout(function (){
-            document.getElementById('landing').classList.add('visible');
-            setTimeout(function (){
-                //document.getElementById('landing').classList.remove('visible');
-                document.getElementById('landing').classList.add('hidden');
-                // document.getElementById('landing').remove();
-                document.getElementById('landing').style.zIndex = "5";
-                document.getElementById('intro').style.zIndex = "1";
-                document.getElementById('intro').classList.add('initiallyHidden');
-                document.getElementById('intro').classList.add('visible');
-                document.getElementById('myvideo').play();
-                document.getElementById('myvideo').onended = function () {
-                    document.getElementById('intro').remove();
-                    document.getElementById('pageOne').classList.remove('initiallyHidden');
-                    document.getElementById('pageOne').classList.add('visible');
-                }
-
-            },3500);
-        }, 500);
+        function nextScreen(){
+            document.getElementById("second_screen").style.WebkitTransition = "all 4s"; // Code for Safari 3.1 to 6.0
+            document.getElementById("second_screen").style.transition = "all 4s";
+            document.getElementById("second_screen").style.width = "90%";
+            document.getElementById("second_screen").style.height = "90%";
+        }
     </script>
 </head>
 <body>
-<div id="container" style="height: 80vh; visibility: visible; text-align: center;">
-    <div id="landing" class="centerVid layers initiallyHidden" style="min-width: 80vh; width:100%; z-index: 1; align-content: center">
-        <div><img src="images/ESFIhAbS_400x400.jpg" width="150px"></div><div class="slogan">
-        <span class="leadCharacter">C</span>HANGING <span  class="leadCharacter">L</span>IVES <span  class="leadCharacter">E</span>VERY <span  class="leadCharacter">O</span>PPORTUNITY</div>
-    </div>
-    <div id="intro" class="centerVid layers initiallyHidden" style="position: absolute; top: 0; width:100%; justify-content: center">
-        <video id='myvideo' width="80%" controls muted class="centerVid" onended="nextScreen">
-            <source  src="video/CLEO_ALT_2_cubes_v8.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-    <div id="pageOne" class="centerVid layers initiallyHidden" style="position: absolute; top: 0; width:100%; justify-content: center">
-        <div class="slogan">Now I am here</div>
-    </div>
-</div>
+<!--<div id="background_container" style="z-index: -1">-->
+ <!--&lt;!&ndash; set background in center with opacity &ndash;&gt;-->
+<!--</div>-->
+<div id="container" class="container">
+    <!--  left navigation -->
 
+    <!-- main container -->
+    <div id="main" class="main">
+        <!-- Main section -->
+        <div id="main_container" class="main_container">
+            <video id='myvideo' width="85%" autoplay muted class="centerVid" style="padding-left: 10px" onended="nextScreen()">
+                <source  src="video/CLEO.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div id="second_screen" class="top_layer">
+            Display Info about cleo
+            <!--<h1 class="font_style">Coming In 2019</h1>-->
+            <!--<ul class="font_style" style="font-color: grey; clear: both">-->
+                <!--<li>A BETTER WAY TO GIVE</li>-->
+            <!--</ul>-->
+            <p ></p>
+        </div>
+    </div>
+    <!--<div id="header">-->
+        <!--<div id="logo">-->
+            <!--<img src="images/ESFIhAbS_400x400.jpg" width="150px">-->
+        <!--</div>-->
+        <!--<div class="slogan" style="float: left">-->
+            <!--<span class="leadCharacter">C</span>HANGING-->
+            <!--<span class="leadCharacter">L</span>IVES-->
+            <!--<span  class="leadCharacter">E</span>VERY-->
+            <!--<span  class="leadCharacter">O</span>PPORTUNITY<br>-->
+            <!--<span class="leadCharacter" style="font-weight: bold">SOCIAL ECONOMY</span>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div id="info">-->
+        <!--<div style="display: table-cell; width: 85%; padding-top: 0; border: 1px #2A2A68 solid; padding: 10px 10px 10px 10px; border-radius: 10px">-->
+            <!--<h3 style="text-align: center">Get Ready</h3>-->
+            <!--<p></p>-->
+        <!--</div>-->
+
+    <!--</div>-->
+
+</div>
 </body>
 </html>
