@@ -54,19 +54,26 @@
         }
         .top_layer{
             display: flex;
-            width: 0%;
-            height: 0%;
             background-color: white;
             justify-content: center;
             overflow: hidden;
             position: absolute;
-            top: 50%;
-            left: 50%;
+            /*top: 50%;*/
+            /*left: 50%;*/
+            top: 25px;
+            left: 90px;
             margin-left: 28px;
             margin-right: 28px;
-            transform: translate(-50%, -50%);
+            /*transform: translate(-50%, -50%);*/city=50);
+            /*opacity:.50;*/
+            width: 90%;
+            height: 95%;
+            visibility: hidden;
         }
-
+        .nav_item{
+            width: 75px;
+            height: 100px;
+        }
         #myvideo{
             -moz-border-radius:25px;
             -webkit-border-radius:25px;
@@ -78,7 +85,7 @@
             /*border-top-right-radius: 15px;*/
             width: 95%;
             border: 1px blue solid;
-            height: 97%;
+            height: 95%;
             overflow: hidden;
             margin-top: 20px;
             align-self: left;
@@ -138,7 +145,7 @@
             font-family: 'alteHaas', sans-serif;
             margin-left: 10px;
             overflow: auto;
-            height: calc(90vh - 250px);
+            height: calc(90vh - 150px);
         }
         b{
             color: #62BBE9;
@@ -147,6 +154,11 @@
             display: inline-block;
             flow: left;
             width: 100%;
+        }
+        .bulletList2{
+            display: inline-block;
+            flow: left;
+            width: 50%;
         }
         ul{
             list-style-image: url('images/bullet.jpg');
@@ -175,10 +187,12 @@
     </style>
     <script language="JavaScript">
         function nextScreen(){
-            document.getElementById("second_screen").style.WebkitTransition = "all 4s"; // Code for Safari 3.1 to 6.0
-            document.getElementById("second_screen").style.transition = "all 4s";
-            document.getElementById("second_screen").style.width = "90%";
-            document.getElementById("second_screen").style.height = "100%";
+            // document.getElementById("second_screen").style.WebkitTransition = "all 4s"; // Code for Safari 3.1 to 6.0
+            // document.getElementById("second_screen").style.transition = "all 4s";
+            // document.getElementById("second_screen").style.width = "90%";
+            // document.getElementById("second_screen").style.height = "100%";
+            document.getElementById('main_container').style.visibility = 'hidden';
+            document.getElementById('second_screen').style.visibility = 'visible';
         }
     </script>
 </head>
@@ -189,7 +203,10 @@
 <div id="container" class="container">
     <!--  left navigation -->
     <div id="navigation" class="navigation">
-        nav links here
+        <div class="nav_item"><img src="images/facebookCLEO.png" width="50px"></div>
+        <div class="nav_item"><img src="images/telegramCLEO.png" width="50px"></div>
+        <div class="nav_item"><img src="images/twitterCLEO.png" width="50px"></div>
+        <div class="nav_item"><img src="images/instagramCLEO.png" width="50px"></div>
     </div>
     <!-- main container -->
     <div id="main" class="main">
@@ -209,10 +226,10 @@
                     </div>
                 </div>
                 <div class="main_section">
+                    <img src="images/photo_2019-03-15_01-06-40.jpg" width="500px" align="right" style="padding-left: 5px; padding-top: 10px;">
                     <p>
                         <b>What is CLEO?</b><br>
-                        <p>The CLEO Global foundation
-                    is a non-profit organization, with the mission of personal empowerment, allowing people to live the life that they deserve.</p>
+                        <p>The CLEO Global's mission is of personal empowerment, allowing people to live the life that they deserve.</p>
                     </p>
                     <p>The vision of the CLEO project is to develop and promote
                         a sustainable social and economic cooperation by changing the way individuals interact and exchange
@@ -235,17 +252,33 @@
                             <li>Promote social entrepreneurship</li>
                             <li>Enable community based collaboration online and on the ground</li>
                             <li>Provide the tools and resources for individuals and community projects underpinned with charitable co action.</li>
+                            <li>Partner with approved charities and work hand and hand with them to maximize charitable potential</li>
                         </ul>
                     </div>
-                </div>
-                <div class="bottom">
-                    <form>
-                        <br><br>
-                        Get all the latest CLEO updates by signing up for CLEO News Letter
-                        <input type="email" placeholder="email address" size="25" id="newsemail">
-                        <input type="submit" value="Sign Me Up!">
-                    </form>
+                    <p><b>How can YOU help?</b></p>
+                    <img src="images/photo_2019-03-15_01-53-54.jpg" width="450" align="right" style="padding-bottom: 10px">
+                    <p>Define your legacy by making a difference.  Volunteers your talents / knowledge to help CLEO make a difference like never seen before.
+                       All help is welcomed, examples of skills are:
+                    </p>
+                    <div class="bulletList2">
+                        <ul style="width: 40%;">
+                            <li>Legal</li>
+                            <li>Accounting</li>
+                            <li>Developers</li>
+                        </ul><ul style="width: 40%; float: left">
+                            <li>Case Workers</li>
+                            <li>Event Planing</li>
+                            <li>Promoting</li>
+                        </ul>
+                    </div>
+                    <div class="bottom">
+                        <form>
+                            Get all the latest CLEO updates by signing up for CLEO News Letter
+                            <input type="email" placeholder="email address" size="25" id="newsemail">
+                            <input type="submit" value="Sign Me Up!">
+                        </form>
 
+                    </div>
                 </div>
                 <!-- <ul class="font_style" style="font-color: grey; clear: both">
                 <li>A BETTER WAY TO GIVE</li>
