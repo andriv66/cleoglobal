@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="35px" viewBox="0 0 30 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>icons/hamburger/hamburger-icon_main</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M24,17 L24,19 C24,19.546875 23.546875,20 23,20 L1,20 C0.453125,20 0,19.546875 0,19 L0,17 C0,16.453125 0.453125,16 1,16 L23,16 C23.546875,16 24,16.453125 24,17 Z M24,9 L24,11 C24,11.546875 23.546875,12 23,12 L1,12 C0.453125,12 0,11.546875 0,11 L0,9 C0,8.453125 0.453125,8 1,8 L23,8 C23.546875,8 24,8.453125 24,9 Z M24,1 L24,3 C24,3.546875 23.546875,4 23,4 L1,4 C0.453125,4 0,3.546875 0,3 L0,1 C0,0.453125 0.453125,0 1,0 L23,0 C23.546875,0 24,0.453125 24,1 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="side-nav/closed" transform="translate(-14.000000, -14.000000)">
+            <g id="icons/hamburger/hamburger-icon_main" transform="translate(14.000000, 14.000000)">
+                <g transform="translate(3.000000, 0.000000)" fill-rule="evenodd" id="colors/primary/blue" stroke-width="1">
+                    <g>
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#2CA8E2" xlink:href="#path-1"></use>
+                        <g id="colors/primary/gray" mask="url(#mask-2)" fill="#2E4250">
+                            <rect id="Rectangle-Copy-4" x="0" y="0" width="24" height="20"></rect>
+                        </g>
+                    </g>
+                </g>
+                <text id="menu" font-family="AvenirNextLTPro-Demi, Avenir Next LT Pro" font-size="11" font-weight="500" letter-spacing="0.3666666" fill="#2E4250">
+                    <tspan x="0" y="34">menu</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
